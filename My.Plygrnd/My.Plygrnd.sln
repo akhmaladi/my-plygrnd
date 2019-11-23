@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My-Plygrnd-Web", "My-Plygrnd-Web\My-Plygrnd-Web.csproj", "{9F597415-0400-43FF-B49A-626247F6965C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F597415-0400-43FF-B49A-626247F6965C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F597415-0400-43FF-B49A-626247F6965C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F597415-0400-43FF-B49A-626247F6965C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F597415-0400-43FF-B49A-626247F6965C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16BA93A3-9B7E-4597-825C-9AA3C783F6E4}
+	EndGlobalSection
+EndGlobal
