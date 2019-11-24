@@ -4203,6 +4203,19 @@ textarea.input-group-sm > .input-group-btn > .btn {
   text-decoration: none;
 }
 
+.navbar-login {
+    float: right;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #818181;
+}
+
+.navbar-login:hover,
+.navbar-login:focus {
+    text-decoration: none;
+}
+
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand {
     margin-left: -15px;
@@ -4501,26 +4514,26 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #428bca;
-  border-color: #428bca;
+  background-color: #111;
+  border-color: #111;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #333333;
+    color: #818181;
 }
 
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #ffffff;
+  color: #f1f1f1;
   background-color: transparent;
 }
 
 .navbar-inverse .navbar-text {
-  color: #333333;
+    color: #818181;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #333333;
+    color: #818181;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -4952,8 +4965,8 @@ a.list-group-item.active > .badge,
 
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .container .jumbotron {
     padding-right: 60px;
@@ -6818,7 +6831,7 @@ td.visible-print {
 /*side bar*/
 .sidenav {
     height: 100%;
-    width: 0;
+    width: 200px;
     position: fixed;
     z-index: 1;
     left: 0;

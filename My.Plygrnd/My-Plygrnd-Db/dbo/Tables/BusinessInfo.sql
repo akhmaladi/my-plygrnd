@@ -1,0 +1,10 @@
+﻿USE [my-plygrnd]
+GO
+
+CREATE TABLE [dbo].[BusinessInfo]
+(
+	[Id] BIGINT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	[Name] VARCHAR(200) NOT NULL,
+	[Type] BIGINT NOT NULL,
+	[PIC] VARCHAR(200) NOT NULL
+)

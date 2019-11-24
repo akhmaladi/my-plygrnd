@@ -6,6 +6,9 @@
     <title>@ViewBag.Title at MY-PLYGRND</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <meta name="google-signin-client_id" content="191127459365-omocg48tjhohkmq5es1nvq8vogk6t141.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -20,26 +23,26 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li id="login-nav">@Html.ActionLink("Login", "Index", "Login")</li>
+                    <li id="logout-nav">@Html.ActionLink("Sign Out", "Index", "Login", new { }, new { onclick = "signOut()" })</li>
                 </ul>
             </div>
         </div>
     </div>
     <div id="sidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <div id="sidenav-control">
+            @Html.ActionLink("Home", "Index", "Home")
+            @Html.ActionLink("About", "About", "Home")
+            @Html.ActionLink("Contact", "Contact", "Home")
+        </div>
+        <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
     </div>
     <div id="main" class="container body-content">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+        <!--<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>-->
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year MY-PLYGRND</p>
+            <p>&copy; @DateTime.Now.Year akhmal.adi</p>
         </footer>
     </div>
 
@@ -57,6 +60,33 @@
             document.getElementById("sidenav").style.width = "0";
             document.getElementById("main").style.marginLeft = "85px";
         }
+
+        function isLoggedIn() {
+            if (localStorage.getItem("isLogin") == "true") {
+                $("#login-nav").css("display", "none");
+                $("#logout-nav").css("display", "block");
+
+                $("#sidenav-control").css("display", "block");
+            }
+            else {
+                $("#login-nav").css("display", "block");
+                $("#logout-nav").css("display", "none");
+
+                $("#sidenav-control").css("display", "none");
+            }
+        }
+
+        function signOut() {
+            localStorage.setItem("isLogin", "false");
+
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+            });
+        }
+
+        window.onload = isLoggedIn();
     </script>
+    <div class="g-signin2" data-onsuccess="" hidden="hidden"></div>
 </body>
 </html>
