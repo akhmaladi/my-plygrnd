@@ -7,7 +7,7 @@ namespace My.Plygrnd.Library.DAL
     public interface IBusinessDAL
     {
         IList<BusinessInfo> GetBusinessInfo();
-        BusinessOutlet GetBusinessOutlet(long businessId);
+        IList<BusinessOutlet> GetBusinessOutlet(long businessId);
     }
     public class BusinessDAL : IBusinessDAL
     {
@@ -30,20 +30,13 @@ namespace My.Plygrnd.Library.DAL
             return result;
         }
 
-        public BusinessOutlet GetBusinessOutlet(long businessId)
+        public IList<BusinessOutlet> GetBusinessOutlet(long businessId)
         {
-            var result = new BusinessOutlet();
+            var result = new List<BusinessOutlet>();
 
             using (var reader = databaseHelper.ReadFromStoredProcedure("[dbo].[usp_BusinessOutlet_Get]", new { BusinessId = businessId }))
             {
-                while (reader.Read())
-                {
-                    result.Id = (long)reader["Id"];
-                    result.BusinessId = (long)reader["BusinessId"];
-                    result.BranchId = reader["BranchId"].ToString();
-                    result.Name = reader["Name"].ToString();
-                    result.Address = reader["Address"].ToString();
-                }
+                while (reader.Read()) result.Add(reader.PopulateFromRow<BusinessOutlet>());
             }
 
             return result;

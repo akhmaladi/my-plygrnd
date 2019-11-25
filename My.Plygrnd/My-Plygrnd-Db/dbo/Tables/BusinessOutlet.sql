@@ -7,7 +7,9 @@ CREATE TABLE [dbo].[BusinessOutlet]
 	[BusinessId] BIGINT NOT NULL,
 	[BranchId] VARCHAR(20) NOT NULL,
 	[Name] VARCHAR(200) NOT NULL,
-	[Address] VARCHAR(2000) NULL
+	[Address] VARCHAR(2000) NULL, 
+    [Latitude] DECIMAL(18, 6) NULL, 
+    [Longitude] DECIMAL(18, 6) NULL
 )
 GO
 

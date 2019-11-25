@@ -12,11 +12,11 @@ VALUES	('New Town', 1, 'Aiman'),
 		('Relax @ Cafe', 2, 'Burhan')
 
 TRUNCATE TABLE BusinessOutlet
-INSERT INTO BusinessOutlet (BusinessId, BranchId, [Name], [Address])
-VALUES	((SELECT Id FROM BusinessInfo (NOLOCK) WHERE [Name] = 'New Town'), 'NT001', 'New Town Puchong', '15, Jalan Puteri 1/6, Bandar Puteri, 47100 Puchong, Selangor'),
-		((SELECT Id FROM BusinessInfo (NOLOCK) WHERE [Name] = 'New Town'), 'NT002', 'New Town Bangi', '23, Jalan Medan Pusat Bandar 4A, Seksyen 9, 43650 Bangi, Selangor'),
-		((SELECT Id FROM BusinessInfo (NOLOCK) WHERE [Name] = 'Relax @ Cafe'), 'RC001', 'RC Klang', '2112, Jalan Meru, Kawasan 17, 41300 Klang, Selangor'),
-		((SELECT Id FROM BusinessInfo (NOLOCK) WHERE [Name] = 'Relax @ Cafe'), 'RC002', 'RC PJ', 'ground floor 8, Lebuh Bandar Utama, Bu 12, 47800 Petaling Jaya, Selangor')
+INSERT INTO BusinessOutlet (BusinessId, BranchId, [Name], [Address], Latitude, Longitude)
+VALUES	((SELECT Id FROM BusinessInfo (NOLOCK) WHERE [Name] = 'New Town'), 'NT001', 'New Town Puchong', '15, Jalan Puteri 1/6, Bandar Puteri, 47100 Puchong, Selangor', 3.026059, 101.617199),
+		((SELECT Id FROM BusinessInfo (NOLOCK) WHERE [Name] = 'New Town'), 'NT002', 'New Town Bangi', '23, Jalan Medan Pusat Bandar 4A, Seksyen 9, 43650 Bangi, Selangor', 2.958588, 101.755745),
+		((SELECT Id FROM BusinessInfo (NOLOCK) WHERE [Name] = 'Relax @ Cafe'), 'RC001', 'RC Klang', '2112, Jalan Meru, Kawasan 17, 41300 Klang, Selangor', 3.064494, 101.453134),
+		((SELECT Id FROM BusinessInfo (NOLOCK) WHERE [Name] = 'Relax @ Cafe'), 'RC002', 'RC PJ', 'ground floor 8, Lebuh Bandar Utama, Bu 12, 47800 Petaling Jaya, Selangor', 3.137008, 101.608275)
 
 TRUNCATE TABLE WebUser
 INSERT INTO WebUser (BusinessId, Username, Password, Status, CreationDate)

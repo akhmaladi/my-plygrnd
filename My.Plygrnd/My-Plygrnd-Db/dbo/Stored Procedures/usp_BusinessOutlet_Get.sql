@@ -8,7 +8,7 @@ GO
 CREATE PROCEDURE [dbo].[usp_BusinessOutlet_Get]
 	@BusinessId BIGINT
 AS
-	SELECT Id, BusinessId, BranchId, [Name], [Address]
+	SELECT Id, BusinessId, BranchId, [Name], [Address], Latitude, Longitude
 	FROM BusinessOutlet (NOLOCK)
 	WHERE BusinessId = @BusinessId
 RETURN 0

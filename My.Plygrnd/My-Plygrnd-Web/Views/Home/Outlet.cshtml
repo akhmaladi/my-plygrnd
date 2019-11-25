@@ -1,4 +1,4 @@
-﻿@model My.Plygrnd.Library.Models.BusinessOutlet
+﻿@model IEnumerable<My.Plygrnd.Library.Models.BusinessOutlet>
 
 @{
     ViewBag.Title = "Outlet";
@@ -10,26 +10,86 @@
         height: 400px;
         width: 100%;
     }
+
+    #mapCanvas {
+        display: none;
+    }
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 </style>
 
 <div class="jumbotron"></div>
 
 <div class="row">
-    <div class="col-md-4" align="center">
-        <h2>@Html.DisplayFor(model => model.Name)</h2>
-        <p>@Html.DisplayNameFor(model => model.BranchId): @Html.DisplayFor(model => model.BranchId)</p>
-        <p>@Html.DisplayNameFor(model => model.Address): @Html.DisplayFor(model => model.Address)</p>
-    </div>
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4" align="center">
+            <h2>@Html.DisplayFor(model => item.Name)</h2>
+            <p>@Html.DisplayNameFor(model => model.BranchId): @Html.DisplayFor(model => item.BranchId)</p>
+            <p>@Html.DisplayNameFor(model => model.Address): @Html.DisplayFor(model => item.Address)</p>
+            <p>lat: @Html.ValueFor(model => item.Latitude), lng: @Html.ValueFor(model => item.Longitude)</p>
+            <p><a href="javascript:void(0)" onclick="showMap(@Html.ValueFor(model => item.Latitude), @Html.ValueFor(model => item.Longitude))">Map</a></p>
+        </div>
+    }
 </div>
 
-<div id="map"></div>
+<div id="mapCanvas" class="modal">
+    <div class="modal-content" id="map"></div>
+</div>
+
 <script>
     var map;
+
     function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: 2.962243, lng: 101.758058 },
-            zoom: 8
+        var mapPointer = { lat: 4.111216, lng: 100.5588516 };
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: mapPointer,
+            zoom: 5
         });
+
+        var marker = new google.maps.Marker({ position: mapPointer, map: map });
+     }
+
+    function showMap(mapLat, mapLng) {
+        $("#mapCanvas").css("display", "block");
+
+        var mapPointerOnLoad = { lat: mapLat, lng: mapLng };
+        var mapOnLoad = new google.maps.Map(document.getElementById('map'), {
+            center: mapPointerOnLoad,
+            zoom: 15
+        });
+        var markerOnLoad = new google.maps.Marker({ position: mapPointerOnLoad, map: mapOnLoad });
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById("mapCanvas");
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
 </script>
 

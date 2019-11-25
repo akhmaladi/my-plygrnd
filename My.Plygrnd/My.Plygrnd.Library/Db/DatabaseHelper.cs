@@ -29,7 +29,7 @@ namespace My.Plygrnd.Library.Db
             {
                 command.CommandText = storedProcedureName;
                 command.CommandType = CommandType.StoredProcedure;
-                command.CommandTimeout = 60 * 3;
+                command.CommandTimeout = 60 * 5;
                 foreach (var propertyInfo in type.GetProperties())
                     command.AddParameter(propertyInfo.Name, propertyInfo.GetValue(parameterValues));
 
@@ -47,7 +47,7 @@ namespace My.Plygrnd.Library.Db
             {
                 command.CommandText = storedProcedureName;
                 command.CommandType = CommandType.StoredProcedure;
-                command.CommandTimeout = 60 * 3;
+                command.CommandTimeout = 60 * 5;
                 foreach (var propertyInfo in type.GetProperties())
                     command.AddParameter(propertyInfo.Name, propertyInfo.GetValue(parameterValues));
 
@@ -71,7 +71,7 @@ namespace My.Plygrnd.Library.Db
             {
                 command.CommandText = storedProcedureName;
                 command.CommandType = CommandType.StoredProcedure;
-                command.CommandTimeout = 60 * 3;
+                command.CommandTimeout = 60 * 5;
                 foreach (var propertyInfo in type.GetProperties())
                     command.AddParameter(propertyInfo.Name, propertyInfo.GetValue(parameterValues));
 
