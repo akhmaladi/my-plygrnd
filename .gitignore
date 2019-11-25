@@ -7,3 +7,5 @@ My.Plygrnd/My.Plygrnd.Library/bin/
 My.Plygrnd/My.Plygrnd.Library/obj/My.Plygrnd.Library.csproj.nuget.cache
 My.Plygrnd/My.Plygrnd.Library/obj/
 My.Plygrnd/packages/
+*.jfm
+*.dbmdl
