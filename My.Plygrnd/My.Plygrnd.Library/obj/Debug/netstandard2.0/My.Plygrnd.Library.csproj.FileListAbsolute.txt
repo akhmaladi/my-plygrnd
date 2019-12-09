@@ -1,0 +1,8 @@
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Library\bin\Debug\netstandard2.0\My.Plygrnd.Library.deps.json
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Library\bin\Debug\netstandard2.0\My.Plygrnd.Library.dll
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Library\bin\Debug\netstandard2.0\My.Plygrnd.Library.pdb
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Library\obj\Debug\netstandard2.0\My.Plygrnd.Library.csproj.CoreCompileInputs.cache
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Library\obj\Debug\netstandard2.0\My.Plygrnd.Library.AssemblyInfoInputs.cache
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Library\obj\Debug\netstandard2.0\My.Plygrnd.Library.AssemblyInfo.cs
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Library\obj\Debug\netstandard2.0\My.Plygrnd.Library.dll
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Library\obj\Debug\netstandard2.0\My.Plygrnd.Library.pdb

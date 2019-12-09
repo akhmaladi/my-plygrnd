@@ -1,0 +1,16 @@
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My-Plygrnd-Db\bin\Debug\My.Plygrnd.Db.dacpac
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My-Plygrnd-Db\obj\Debug\My.Plygrnd.Db.sqlprojResolveAssemblyReference.cache
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My-Plygrnd-Db\obj\Debug\Model.xml
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My-Plygrnd-Db\obj\Debug\refactor.xml
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My-Plygrnd-Db\obj\Debug\postdeploy.sql
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My-Plygrnd-Db\obj\Debug\predeploy.sql
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My-Plygrnd-Db\obj\Debug\My_Plygrnd_Db.dll
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My-Plygrnd-Db\obj\Debug\My_Plygrnd_Db.pdb
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Db\bin\Debug\My.Plygrnd.Db.dacpac
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Db\obj\Debug\My.Plygrnd.Db.sqlprojResolveAssemblyReference.cache
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Db\obj\Debug\Model.xml
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Db\obj\Debug\refactor.xml
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Db\obj\Debug\postdeploy.sql
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Db\obj\Debug\predeploy.sql
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Db\obj\Debug\My_Plygrnd_Db.dll
+D:\Workplace\Source Code\MY-PLYGRND\My.Plygrnd\My.Plygrnd.Db\obj\Debug\My_Plygrnd_Db.pdb
